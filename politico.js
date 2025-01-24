@@ -8,6 +8,7 @@ export default class Politico{
         this.ataque = ataque;
         this.defensa = defensa;
         this.ideología = ideologia;
+        addPoliticos();
     }
 
     atacar(){
@@ -25,5 +26,11 @@ export default class Politico{
     comerGambas(){
 
     }
+
+    static addPoliticos(){
+        this.numeroPoliticos++;
+    }
+
+
 
 }
