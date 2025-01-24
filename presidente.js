@@ -1,24 +1,29 @@
 import 'presidente.js';
 
-class Presidente{
-    constructor (nombre, apellido, pais, vida, ataque, defensa, ideologia, nivelCorrupcion){
-        super(nombre, apellido, pais, vida, ataque, defensa, ideologia);
-        this.nivelCorrupcion = nivelCorrupcion;
+class Presidente extends Politico{
 
+    nivelCorrupcion = 0;
+
+    constructor (nombre, apellido, pais, vida, ataque, defensa, ideologia){
+        super(nombre, apellido, pais, vida, ataque, defensa, ideologia);
+        asignarNivelCorrupcion();
+
+    };
+
+    asignarNivelCorrupcion() {
+        this.nivelCorrupcion = Math.floor((Math.random() * 100) + 1)
+    }
+
+    // Recibe Objeto Alianzas y reasigna su 
+    hacerAlianza(ObjetoAlianza) {
+
+        ObjetoAlianza.keys() = alianzas
     }
 
 
-    setNivelCorrupcion(nivel){
+
+    chuparDelBote (){
         
-        let porcentajeCorrupcion = this.nivelCorrupcion += nivel;
-
-        if(porcentajeCorrupcion < 100){
-            this.nivelCorrupcion = 100;
-
-        }else if(porcentajeCorrupcion < 0){
-            this.nivelCorrupcion *= 0;
-        }
-
-        return porcentajeCorrupcion;
+        super.recuperarVida * (1 + (this.nivelCorrupcion / 100));
     }
 }
