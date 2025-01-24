@@ -1,6 +1,6 @@
-import 'presidente.js';
+import Politico from 'politico.js';
 
-class Presidente extends Politico{
+export class Presidente extends Politico{
 
     nivelCorrupcion = 0;
 

@@ -1,7 +1,7 @@
 //Hecho por Alan Adamson
 
 
-export default class Politico{
+export class Politico{
     static numeroPoliticos = 0;
     
     constructor (nombre, apellido, pais, vida, ataque, defensa, ideologia){
@@ -24,7 +24,9 @@ export default class Politico{
     }
 
     recuperarVida(){
-        throw new Error("Debe implementar su método");
+        this.vida *= 1.05;
+
+        return this.vida;
     }
 
     static addPoliticos(){

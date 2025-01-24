@@ -1,6 +1,6 @@
-import Politico from "./politico";
+import Politico from "./politico.js";
 
-class Ministro extends Politico {
+export class Ministro extends Politico {
     constructor(
         nombre,
         apellido,

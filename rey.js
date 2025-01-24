@@ -1,5 +1,5 @@
-import Politico from "./politico";
-class Rey extends Politico{
+import Politico from "./politico.js";
+export class Rey extends Politico{
 
     casaNobiliaria;
 
