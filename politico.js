@@ -3,6 +3,7 @@
 
 export default class Politico{
     static numeroPoliticos = 0;
+    
     constructor (nombre, apellido, pais, vida, ataque, defensa, ideologia){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -10,30 +11,28 @@ export default class Politico{
         this.vida = vida;
         this.ataque = ataque;
         this.defensa = defensa;
-        this.ideología = ideologia;
-        addPoliticos();
+        this.ideologia = ideologia;
+        Politico.addPoliticos();
     }
 
-    atacar(){
-
+    atacar(defensor){
+        defensor.vida -= this.ataque;
     }
 
     ataqueEspecial(){
-
+        throw new Error("Debe implementar su método");
     }
 
-    golpeDeEstado(){
-
-    }
-
-    comerGambas(){
-
+    recuperarVida(){
+        throw new Error("Debe implementar su método");
     }
 
     static addPoliticos(){
         this.numeroPoliticos++;
     }
 
-
+    static removePolitico() {
+        this.numeroPoliticos = Math.max(0, this.numeroPoliticos - 1);
+      }
 
 }

@@ -1,1 +1,0 @@
-const perroSanxe = new presidente()
